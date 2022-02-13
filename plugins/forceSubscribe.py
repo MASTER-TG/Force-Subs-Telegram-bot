@@ -25,7 +25,7 @@ def _onUnMuteRequest(client, cb):
             if cb.message.reply_to_message.from_user.id == user_id:
               cb.message.delete()
           except UserNotParticipant:
-            client.answer_callback_query(cb.id, text="❗ Join the mentioned 'channel' and press the 'UnMute Me' button again.", show_alert=True)
+            client.answer_callback_query(cb.id, text="❗ චැනලයට  Join  'channel' 🟢 'UnMute Me' button එක ඔබන්න 🔄.", show_alert=True)
       else:
         client.answer_callback_query(cb.id, text="❗ You are muted by admins for other reasons.", show_alert=True)
     else:
@@ -53,8 +53,8 @@ def _check_member(client, message):
               "{}, you are **not subscribed** to my [channel](https://t.me/{}) yet. Please [join](https://t.me/{}) and **press the button below** to unmute yourself.".format(message.from_user.mention, channel, channel),
               disable_web_page_preview=True,
               reply_markup=InlineKeyboardMarkup(
-                  [[InlineKeyboardButton("📢 Join Update Channel 📢", url=f"https://t.me/{channel}")],
-                   [InlineKeyboardButton("UnMute Me", callback_data="onUnMuteRequest")]]
+                  [[InlineKeyboardButton("🔴 චැනලයට  Join වන්න 📢", url=f"https://t.me/{channel}")],
+                   [InlineKeyboardButton("🟢UnMute Me💭", callback_data="onUnMuteRequest")]]
               )
           )
           client.restrict_chat_member(chat_id, user_id, ChatPermissions(can_send_messages=False))
