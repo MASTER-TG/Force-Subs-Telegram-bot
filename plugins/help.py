@@ -42,9 +42,9 @@ def map(pos):
             [InlineKeyboardButton(text = '-->', callback_data = "help+2")]
         ]
     elif(pos==len(tr.HELP_MSG)-1):
-        url = "https://github.com/MRK-YT/Force-Subs-Telegram-bot/issues/new"
+        url = "https://t.me/Tg_Nsns_999"
         button = [
-            [InlineKeyboardButton(text = 'Support Chat', url="https://t.me/Mo_Tech_Group")],
+            [InlineKeyboardButton(text = 'Support Chat', url="https://t.me/Songshut")],
             [InlineKeyboardButton(text = 'Feature Request & Issues', url=url)],
             [InlineKeyboardButton(text = '<--', callback_data = f"help+{pos-1}")]
         ]
